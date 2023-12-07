@@ -140,7 +140,7 @@ public:
 
     iterator Erase(const_iterator pos) {
 
-        assert(pos >= begin() && pos <= end());
+        assert(pos >= begin() && pos < end());
         int position = pos - begin();
 
         std::move(begin() + position + 1, end(), begin() + position);
